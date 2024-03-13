@@ -1,0 +1,12 @@
+{
+  "name": "type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "Ramin Israfilli",
+  "license": "ISC"
+}

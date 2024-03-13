@@ -1,4 +1,4 @@
-"use strict";
+
 const form = document.querySelector('form');
 const ul = document.querySelector('.list-group');
 const ulNav = document.querySelector('.nav');
@@ -69,7 +69,6 @@ function addListItem(todo) {
                     editInput.style.cssText = "width:0%;opacity:0;transition:1s";
                     setTimeout(() => {
                         li.children[3].remove();
-                        saveTodo();
                     }, 900);
                 });
                 saveTodo();
@@ -78,7 +77,6 @@ function addListItem(todo) {
                 [...li.children][3].setAttribute("style", "width:0%;opacity:0");
                 setTimeout(() => {
                     li.children[3].remove();
-                    saveTodo();
                 }, 1400);
             }
         ;
@@ -99,7 +97,6 @@ function loadTodo() {
 }
 ;
 ulNav === null || ulNav === void 0 ? void 0 : ulNav.addEventListener("click", (e) => {
-    console.log(e.target.textContent);
     if (e.target.textContent === "All") {
         e.target.parentNode.parentNode.children[0].children[0].className = "nav-link";
         e.target.parentNode.parentNode.children[1].children[0].className = "nav-link";

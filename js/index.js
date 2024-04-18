@@ -66,12 +66,13 @@ function addListItem(todo) {
                 editInput.addEventListener("change", () => {
                     todo.title = editInput.value;
                     text.innerText = todo.title;
+                     saveTodo();
                     editInput.style.cssText = "width:0%;opacity:0;transition:1s";
                     setTimeout(() => {
                         li.children[3].remove();
                     }, 900);
                 });
-                saveTodo();
+               
             }
             else {
                 [...li.children][3].setAttribute("style", "width:0%;opacity:0");
